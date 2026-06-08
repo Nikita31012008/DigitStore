@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="header">
+            <h1>🌍 World Clock</h1>
+            <p>Current time in different time zones</p>
+        </div>
+
+        <!-- Add Time Zone Section -->
+        <div class="add-timezone-section">
+            <select id="timezoneSelect" class="timezone-select">
+                <option value="">Select a timezone...</option>
+                <option value="America/New_York">🗽 New York (EST)</option>
+                <option value="America/Chicago">🏙️ Chicago (CST)</option>
+                <option value="America/Denver">🏔️ Denver (MST)</option>
+                <option value="America/Los_Angeles">🌴 Los Angeles (PST)</option>
+                <option value="Europe/London">🇬🇧 London (GMT)</option>
+                <option value="Europe/Paris">🇫🇷 Paris (CET)</option>
+                <option value="Europe/Berlin">🇩🇪 Berlin (CET)</option>
+                <option value="Europe/Moscow">🇷🇺 Moscow (MSK)</option>
+                <option value="Asia/Dubai">🇦🇪 Dubai (GST)</option>
+                <option value="Asia/Kolkata">🇮🇳 India (IST)</option>
+                <option value="Asia/Bangkok">🇹🇭 Bangkok (ICT)</option>
+                <option value="Asia/Hong_Kong">🇭🇰 Hong Kong (HKT)</option>
+                <option value="Asia/Shanghai">🇨🇳 Shanghai (CST)</option>
+                <option value="Asia/Tokyo">🇯🇵 Tokyo (JST)</option>
+                <option value="Asia/Seoul">🇰🇷 Seoul (KST)</option>
+                <option value="Asia/Singapore">🇸🇬 Singapore (SGT)</option>
+                <option value="Australia/Sydney">🦘 Sydney (AEDT)</option>
+                <option value="Australia/Melbourne">🇦🇺 Melbourne (AEDT)</option>
+                <option value="Pacific/Auckland">🇳🇿 Auckland (NZDT)</option>
+                <option value="Etc/UTC">⏰ UTC</option>
+                <option value="America/Sao_Paulo">🇧🇷 São Paulo (BRT)</option>
+                <option value="Africa/Johannesburg">🇿🇦 Johannesburg (SAST)</option>
+                <option value="Africa/Cairo">🇪🇬 Cairo (EET)</option>
+            </select>
+            <button id="addBtn" class="add-btn">+ Add Timezone</button>
+        </div>
+
+        <!-- Clocks Grid -->
+        <div class="clocks-grid" id="clocksGrid">
+            <!-- Clocks will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
