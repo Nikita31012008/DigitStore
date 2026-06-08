@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitStore - Цифровой магазин игр</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">🎮 DigitStore</div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#/" class="nav-link">Главная</a>
+                <a href="#/catalog" class="nav-link">Каталог</a>
+                <a href="#/cart" class="nav-link">🛒 <span id="cartCount">0</span></a>
+                <div class="nav-user" id="navUser"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="content" class="container"></main>
+
+    <!-- Modal для авторизации -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container" id="authContainer"></div>
+        </div>
+    </div>
+
+    <!-- Modal для товара -->
+    <div class="modal" id="productModal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <div id="productDetail"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
