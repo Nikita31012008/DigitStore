@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitStore - Цифровой магазин игр</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎮 DigitStore</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Главная</a>
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <div class="cart-icon" id="cartIcon">
+                🛒 <span id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Добро пожаловать в DigitStore</h1>
+            <p>Купи и продай цифровые ключи популярных игр</p>
+            <button class="btn btn-primary" onclick="document.querySelector('#catalog').scrollIntoView()">Смотреть каталог</button>
+        </div>
+    </section>
+
+    <!-- Фильтры и каталог -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2>Каталог товаров</h2>
+            
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="🔍 Поиск товара..." class="search-box">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="">Все категории</option>
+                    <option value="games">Игры</option>
+                    <option value="dlc">DLC</option>
+                    <option value="accounts">Аккаунты</option>
+                </select>
+                <select id="priceFilter" class="filter-select">
+                    <option value="">Все цены</option>
+                    <option value="0-500">0 - 500 ₽</option>
+                    <option value="500-1000">500 - 1000 ₽</option>
+                    <option value="1000+">1000+ ₽</option>
+                </select>
+            </div>
+
+            <!-- Товары -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Товары будут загружены здесь -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Корзина (модальное окно) -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>🛒 Ваша корзина</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="totalPrice">0</span> ₽</strong>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()">Оформить покупку</button>
+        </div>
+    </div>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>О DigitStore</h2>
+            <p>DigitStore - это надежная платформа для покупки и продажи цифровых товаров. Мы предоставляем безопасные транзакции и быструю доставку цифровых ключей.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>⚡ Быстро</h3>
+                    <p>Мгновенная доставка после оплаты</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Безопасно</h3>
+                    <p>Защита данных и безопасные платежи</p>
+                </div>
+                <div class="feature">
+                    <h3>💳 Удобно</h3>
+                    <p>Различные способы оплаты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Email: <strong>support@digitstore.ru</strong></p>
+            <p>Telegram: <strong>@digitstore_bot</strong></p>
+            <p>Телефон: <strong>+7 (999) 999-99-99</strong></p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 DigitStore. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
